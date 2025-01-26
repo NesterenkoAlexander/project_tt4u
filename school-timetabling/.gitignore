@@ -1,5 +1,7 @@
-/target
-/build
+/target/*
+!/target/classes/
+/build/*
+!/build/classes/
 /local
 
 # Eclipse, Netbeans and IntelliJ files
