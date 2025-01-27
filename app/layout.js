@@ -1,5 +1,8 @@
 import { Manrope } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/ui/header";
+import { ClerkProvider } from "@clerk/nextjs";
+import { ruRU } from '@clerk/localizations';
 
 const manrope = Manrope({ subsets: ['latin', 'cyrillic']});
 
@@ -10,9 +13,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <ClerkProvider localization={ruRU}>
+    <html lang="ru">
       <body className={`${manrope.className}`}>
         {/* header */}
+        <Header/>
         <main className="min-h-screen">{children}</main>
         {/* footer */} 
         <footer className="bg-purple-50 py-12">
@@ -22,5 +27,6 @@ export default function RootLayout({ children }) {
         </footer> 
         </body>
     </html>
+    </ClerkProvider>
   );
 }
