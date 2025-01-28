@@ -26,7 +26,7 @@ const Header = async () => {
         <Link href={'/dashboard'} className="text-gray-600 hover:text-purple-600 flex items-center gap-2">
           <Button variant='outline'>
               <LayoutDashboard size={18}/>
-              <span className="hidden md:inline">Дашборд</span>
+              <span className="hidden md:inline">Панель Управления</span>
           </Button>
         </Link>
 

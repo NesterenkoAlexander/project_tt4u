@@ -55,7 +55,7 @@ const HeroSection = () => {
                         src='/banner.png'
                         width={1280}
                         height={720}
-                        alt="Превью Дашборда"
+                        alt="Превью панели управления"
                         className="rounded-lg shadow-2xl border mx-auto"
                         priority
                     />
