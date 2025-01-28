@@ -1,3 +1,4 @@
+import React from "react";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs"
 import Image from "next/image"
 import Link from "next/link"
