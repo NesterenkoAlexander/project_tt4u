@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2 } from "lucide-react";
-//import useFetch from "@/hooks/use-fetch";
-//import { toast } from "sonner";
+import useFetch from "@/hooks/use-fetch";
+import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -48,8 +48,29 @@ const CreateAccountDrawer = ({children}) => {
     },
   });
 
-  const onSubmit=async(data)=>{
-    console.log(data);
+  const {
+    loading: createAccountLoading,
+    fn: createAccountFn,
+    error,
+    data: newAccount,
+  } = useFetch(createAccount);
+
+  useEffect(() => {
+    if (newAccount && !createAccountLoading) {
+      toast.success("Счёт успешно добавлен");
+      reset();
+      setOpen(false);
+    }
+  }, [createAccountLoading, newAccount]);
+
+  useEffect(() => {
+    if (error) {
+      toast.error(error.message || "Не удалось добавить счёт");
+    }
+  }, [error]);
+
+  const onSubmit = async (data) => {
+    await createAccountFn(data);
   };
 
   return (
@@ -139,8 +160,19 @@ const CreateAccountDrawer = ({children}) => {
                             </Button>
                         </DrawerClose>
                         
-                        <Button type='submit' className='flex-1'>
-                            Добавить Счёт
+                        <Button
+                            type="submit"
+                            className="flex-1"
+                            disabled={createAccountLoading}
+                        >
+                            {createAccountLoading ? (
+                              <>
+                                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                                Добавление...
+                              </>
+                            ) : (
+                              "Добавить Счёт"
+                            )}
                         </Button>
                     </div>
                 </form>
