@@ -48,7 +48,7 @@ export const featuresData = [
     },
     {
         icon: <CreditCard className="h-8 w-8 text-purple-600" />,
-        title: "Поддержка Мультиаккаунтов",
+        title: "Поддержка Мультисчетов",
         description: "Управляйте несколькими счетами и картами в одном месте",
     },
     {
@@ -67,7 +67,7 @@ export const featuresData = [
 export const howItWorksData = [
     {
         icon: <CreditCard className="h-8 w-8 text-purple-600" />,
-        title: "1. Создайте Аккаунт",
+        title: "1. Создайте Счёт",
         description:
         "Начните всего за несколько минут — простой и безопасный процесс регистрации",
     },
