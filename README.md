@@ -21,7 +21,7 @@ project_tt4u - это интеллектуальная платформа фин
 
 ## Представление DB
 
-database.png
+![database](database.png)
 
 ## Начало работы
 
