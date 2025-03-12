@@ -1,15 +1,21 @@
-import HeroSection from "@/components/hero";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { featuresData, howItWorksData, statsData, testimonialsData } from "@/data/landing";
+import React from "react";
+import { Button } from "../components/ui/button";
+import { Card, CardContent } from "../components/ui/card";
 import Image from "next/image";
+import {
+  featuresData,
+  howItWorksData,
+  statsData,
+  testimonialsData,
+} from "../data/landing";
+import HeroSection from "../components/hero";
 import Link from "next/link";
 
-export default function Home() {
+const LandingPage = () => {
   return (
-    <div className="mt-40">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <HeroSection/>
+      <HeroSection />
 
       {/* Stats Section */}
       <section className="py-20 bg-purple-50">
@@ -17,7 +23,9 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {statsData.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">{stat.value}</div>
+                <div className="text-4xl font-bold text-purple-600 mb-2">
+                  {stat.value}
+                </div>
                 <div className="text-gray-600">{stat.label}</div>
               </div>
             ))}
@@ -26,7 +34,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
+      <section id="features" className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
             Всё необходимое для управления вашими финансами
@@ -48,7 +56,7 @@ export default function Home() {
       {/* How It Works Section */}
       <section className="py-20 bg-purple-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-16">Как Это Работает</h2>
+          <h2 className="text-3xl font-bold text-center mb-16">Как это работает</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {howItWorksData.map((step, index) => (
               <div key={index} className="text-center">
@@ -67,7 +75,7 @@ export default function Home() {
       <section id="testimonials" className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-16">
-            Отзывы Пользователей
+            Отзывы пользователей
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonialsData.map((testimonial, index) => (
@@ -83,7 +91,9 @@ export default function Home() {
                     />
                     <div className="ml-4">
                       <div className="font-semibold">{testimonial.name}</div>
-                      <div className="text-sm text-gray-600">{testimonial.role}</div>
+                      <div className="text-sm text-gray-600">
+                        {testimonial.role}
+                      </div>
                     </div>
                   </div>
                   <p className="text-gray-600">{testimonial.quote}</p>
@@ -98,10 +108,10 @@ export default function Home() {
       <section className="py-20 bg-purple-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Готовы Взять под Контроль Свои Финансы?
+            Готовы взять контроль над своими финансами?
           </h2>
           <p className="text-purple-100 mb-8 max-w-2xl mx-auto">
-            Присоединяйтесь к тысячам пользователей, кто уже распоряжается финансами умнее с project_tt4u
+            Присоединяйтесь к тысячам пользователей, которые уже управляют своими финансами с помощью project_tt4u
           </p>
           <Link href="/dashboard">
             <Button
@@ -115,4 +125,6 @@ export default function Home() {
       </section>
     </div>
   );
-}
+};
+
+export default LandingPage;
