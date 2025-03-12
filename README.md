@@ -11,13 +11,13 @@ project_tt4u - это интеллектуальная платформа фин
 - **Финансовая аналитика от ИИ** – Получение индивидуальных рекомендаций от ИИ на почту с помощью Resend Inngest   
 - **Данные в режиме реального времени** – Получение финансовых обновлений в режиме реального времени для принятия более эффективных решений.  
 
-## 🛠 Тех. Stack  
+## Тех. Stack  
 
-🔹 **Frontend:** Next.js 15, React 19, TypeScript, Tailwind CSS  
-🔹 **Backend:** Node.js, Express  
-🔹 **Database:** PostgreSQL (via Supabase)
-🔹 **AI Integration:** Google Gemini  
-🔹 **Deployment:** Vercel (!in Progress!) 
+- **Frontend:** Next.js 15, React 19, TypeScript, Tailwind CSS
+- **Backend:** Node.js, Express
+- **Database:** PostgreSQL (via Supabase)
+- **AI Integration:** Google Gemini
+- **Deployment:** Vercel (!in Progress!) 
 
 ## Представление DB
 
