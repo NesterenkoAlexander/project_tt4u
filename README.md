@@ -13,11 +13,11 @@ project_tt4u - это интеллектуальная платформа фин
 
 ## Тех. Stack  
 
-🔹 **Frontend:** Next.js 15, React 19, TypeScript, Tailwind CSS  
-🔹 **Backend:** Node.js, Express  
-🔹 **Database:** PostgreSQL (via Supabase)
-🔹 **AI Integration:** Google Gemini  
-🔹 **Deployment:** Vercel (!in Progress!) 
+- **Frontend:** Next.js 15, React 19, TypeScript, Tailwind CSS
+- **Backend:** Node.js, Express
+- **Database:** PostgreSQL (via Supabase)
+- **AI Integration:** Google Gemini
+- **Deployment:** Vercel (!in Progress!) 
 
 ## Начало работы
 
