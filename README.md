@@ -33,6 +33,7 @@ npm install
 *При ошибках:* npm install --legacy-peer-deps и npm audit fix --force
 
 Отдельно проверим установку ключевых ресурсов:
+
 3. Создание таблиц с миграциями Prisma
 npx prisma migrate dev --name init  # Создает миграции на основе schema.prisma
 npx prisma db push                  # Применяет изменения к базе Supabase
