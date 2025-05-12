@@ -1,4 +1,12 @@
 # Full Stack Платформа финансового менеджмента с ИИ
+<div align="center">
+
+![Next.js](https://img.shields.io/badge/Next.js-15.1.6-black?style=for-the-badge&logo=next.js)
+![React](https://img.shields.io/badge/React-19.0.0-blue?style=for-the-badge&logo=react)
+![Prisma](https://img.shields.io/badge/Prisma-6.3.0-2D3748?style=for-the-badge&logo=prisma)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4.1-38B2AC?style=for-the-badge&logo=tailwind-css)
+
+</div>
 
 project_tt4u - это интеллектуальная платформа финансовой аналитики на базе искусственного интеллекта. Она помогает пользователям отслеживать расходы, анализировать финансовые тенденции и принимать решения на основе данных без особых усилий.  
 
