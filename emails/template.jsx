@@ -9,7 +9,7 @@ import {
   Text,
 } from "@react-email/components";
 
-// Dummy data for preview
+// Данные для предпросмотра
 const PREVIEW_DATA = {
   monthlyReport: {
     userName: "Иван Иванов",
@@ -54,38 +54,38 @@ export default function EmailTemplate({
     return (
       <Html>
         <Head />
-        <Preview>Your Monthly Financial Report</Preview>
+        <Preview>Ваш месячный финансовый отчет</Preview>
         <Body style={styles.body}>
           <Container style={styles.container}>
-            <Heading style={styles.title}>Monthly Financial Report</Heading>
+            <Heading style={styles.title}>Месячный финансовый отчет</Heading>
 
-            <Text style={styles.text}>Hello {userName},</Text>
+            <Text style={styles.text}>Здравствуйте, {userName},</Text>
             <Text style={styles.text}>
-              Here&rsquo;s your financial summary for {data?.month}:
+              Вот ваш финансовый отчет за {data?.month}:
             </Text>
 
-            {/* Main Stats */}
+            {/* Основная статистика */}
             <Section style={styles.statsContainer}>
               <div style={styles.stat}>
-                <Text style={styles.text}>Total Income</Text>
+                <Text style={styles.text}>Общий доход</Text>
                 <Text style={styles.heading}>${data?.stats.totalIncome}</Text>
               </div>
               <div style={styles.stat}>
-                <Text style={styles.text}>Total Expenses</Text>
+                <Text style={styles.text}>Общие расходы</Text>
                 <Text style={styles.heading}>${data?.stats.totalExpenses}</Text>
               </div>
               <div style={styles.stat}>
-                <Text style={styles.text}>Net</Text>
+                <Text style={styles.text}>Чистый доход</Text>
                 <Text style={styles.heading}>
                   ${data?.stats.totalIncome - data?.stats.totalExpenses}
                 </Text>
               </div>
             </Section>
 
-            {/* Category Breakdown */}
+            {/* Расходы по категориям */}
             {data?.stats?.byCategory && (
               <Section style={styles.section}>
-                <Heading style={styles.heading}>Expenses by Category</Heading>
+                <Heading style={styles.heading}>Расходы по категориям</Heading>
                 {Object.entries(data?.stats.byCategory).map(
                   ([category, amount]) => (
                     <div key={category} style={styles.row}>
@@ -97,10 +97,10 @@ export default function EmailTemplate({
               </Section>
             )}
 
-            {/* AI Insights */}
+            {/* Анализ от AI */}
             {data?.insights && (
               <Section style={styles.section}>
-                <Heading style={styles.heading}>AIvest Insights</Heading>
+                <Heading style={styles.heading}>Анализ от AI</Heading>
                 {data.insights.map((insight, index) => (
                   <Text key={index} style={styles.text}>
                     • {insight}
@@ -110,8 +110,8 @@ export default function EmailTemplate({
             )}
 
             <Text style={styles.footer}>
-              Thank you for using AIvest. Keep tracking your finances for better
-              financial health!
+              Спасибо, что используете project_tt4u. Продолжайте отслеживать свои
+              финансы для лучшего финансового здоровья!
             </Text>
           </Container>
         </Body>
@@ -123,26 +123,26 @@ export default function EmailTemplate({
     return (
       <Html>
         <Head />
-        <Preview>Budget Alert</Preview>
+        <Preview>Предупреждение о бюджете</Preview>
         <Body style={styles.body}>
           <Container style={styles.container}>
-            <Heading style={styles.title}>Budget Alert</Heading>
-            <Text style={styles.text}>Hello {userName},</Text>
+            <Heading style={styles.title}>Предупреждение о бюджете</Heading>
+            <Text style={styles.text}>Здравствуйте, {userName},</Text>
             <Text style={styles.text}>
-              You&rsquo;ve used {data?.percentageUsed.toFixed(1)}% of your
-              monthly budget.
+              Вы использовали {data?.percentageUsed.toFixed(1)}% вашего
+              месячного бюджета.
             </Text>
             <Section style={styles.statsContainer}>
               <div style={styles.stat}>
-                <Text style={styles.text}>Budget Amount</Text>
+                <Text style={styles.text}>Сумма бюджета</Text>
                 <Text style={styles.heading}>${data?.budgetAmount}</Text>
               </div>
               <div style={styles.stat}>
-                <Text style={styles.text}>Spent So Far</Text>
+                <Text style={styles.text}>Потрачено на данный момент</Text>
                 <Text style={styles.heading}>${data?.totalExpenses}</Text>
               </div>
               <div style={styles.stat}>
-                <Text style={styles.text}>Remaining</Text>
+                <Text style={styles.text}>Остаток</Text>
                 <Text style={styles.heading}>
                   ${data?.budgetAmount - data?.totalExpenses}
                 </Text>
