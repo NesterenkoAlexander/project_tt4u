@@ -25,12 +25,12 @@ const Header = async () => {
        
         <div className="hidden md:flex items-center space-x-8">
           <SignedOut>
-            <a href="#features" className="text-gray-600 hover:text-blue-600">
+            <a href="#features" className="text-gray-600 hover:text-purple-600">
               Функции
             </a>
             <a
               href="#testimonials"
-              className="text-gray-600 hover:text-blue-600"
+              className="text-gray-600 hover:text-purple-600"
             >
               Отзывы
             </a>
@@ -42,7 +42,7 @@ const Header = async () => {
           <SignedIn>
             <Link
               href="/dashboard"
-              className="text-gray-600 hover:text-blue-600 flex items-center gap-2"
+              className="text-gray-600 hover:text-purple-600 flex items-center gap-2"
             >
               <Button variant="outline">
                 <LayoutDashboard size={18} />
