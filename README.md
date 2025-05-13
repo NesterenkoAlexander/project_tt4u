@@ -25,7 +25,7 @@ project_tt4u - это интеллектуальная платформа фин
 - **Backend:** Node.js, Express
 - **Database:** PostgreSQL (via Supabase)
 - **AI Integration:** Google Gemini
-- **Deployment:** Vercel (!in Progress!) 
+- **Deployment:** Vercel
 
 ## Представление DB
 
