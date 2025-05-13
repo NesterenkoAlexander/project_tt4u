@@ -69,7 +69,7 @@ DIRECT_URL=
         
 ARCJET_KEY=
 
-INNGEST_API_KEY=
+GEMINI_API_KEY=
 ```
 
 6. Локальный запуск:
